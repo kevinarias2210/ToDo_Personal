@@ -1,0 +1,9 @@
+ul{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    list-style: none;
+    flex-direction: column;
+    margin: 40px 39%;
+    padding: 0;
+}

@@ -7,54 +7,51 @@ import { TodosLoading } from '../TodosLoading/TodosLoading';
 import { TodosError } from '../TodosError/TodosError';
 import { TodosEmpty } from '../TodosEmpty/TodosEmpty';
 import { CreateTodoButton } from '../CreateTodoButton/CreateTodoButton';
+import { TodoContext } from "../TodoContext/TodoContext";
 
-function AppUI({
-    completedTodos,
-    totalTodos,
-    searchValue,
-    setBuscarValue,
-    getSearch,
-    loading,
-    error,
-    completeTodo,
-    deleteTodo}
-){
+function AppUI(){
     return(
-        <>
-      <TodoCounter completed = { completedTodos }  total = { totalTodos }/>
-      <TodoSearch 
-        searchValue = { searchValue }
-        setBuscarValue = { setBuscarValue }
-        /* getSearchValue = { getSearch } */
-      />
+      <>
+        <TodoCounter/>
+        <TodoSearch />
 
-      <TodoList>
-        {loading && <TodosLoading />}
-        {error && <TodosError />}
-        {(!loading && getSearch.length === 0) && <TodosEmpty />}
+        <TodoContext.Consumer>
+          {({
+            getSearch,
+            loading,
+            error,
+            completeTodo,
+            deleteTodo
+          }) => (
+            <TodoList>
+              {loading && <TodosLoading />}
+              {error && <TodosError />}
+              {(!loading && getSearch.length === 0) && <TodosEmpty />}
 
-        { getSearch.map(todo => (
-          <TodoItem key={ todo.text } text={ todo.text } 
-          completed={todo.completed} onComplete = { () => {
-            completeTodo(todo.text)
-            } 
-          }
-          onDelete = { () => {
-            deleteTodo(todo.text)
-            } 
-          }
-          />
-        )
-    
-          /* return(
-            <TodoItem />
-          ) esta parte es lo mismo que el anterior, solo se reduce gracias a
-          ecmascript 6 */
-        )}
-      </TodoList>
-    
-      <CreateTodoButton />
-    </>
+              { getSearch.map(todo => (
+                <TodoItem key={ todo.text } text={ todo.text } 
+                completed={todo.completed} onComplete = { () => {
+                  completeTodo(todo.text)
+                  } 
+                }
+                onDelete = { () => {
+                  deleteTodo(todo.text)
+                  } 
+                }
+                />
+              )
+        
+              /* return(
+                <TodoItem />
+              ) esta parte es lo mismo que el anterior, solo se reduce gracias a
+              ecmascript 6 */
+              )}
+            </TodoList>
+          )}
+        </TodoContext.Consumer>
+      
+        <CreateTodoButton />
+      </>
     )
 }
 

@@ -1,0 +1,55 @@
+.form{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.form__container{
+    display: flex;
+    flex-direction: column;
+}
+
+.form__label{
+    font-size: 25px;
+    font-weight: 800;
+    color: #fff500;
+    text-shadow: 1px 2px #000000c4;
+}
+
+.form__textArea{
+    height: 37px;
+    margin-top: 10px;
+}
+
+.form__textArea::placeholder{
+    padding-top: 10px;
+    text-align: center;
+}
+
+.form__container--Botones{
+    width: 242px;
+    height: 49px;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.TodoForm__btnCancel{
+    width: 90px;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 12px;
+    border: none;
+    color: white;
+    background-color: rgb(197, 45, 45);
+}
+
+.TodoForm__btnAdd{
+    margin-top: 10px;
+    font-size: 12px;
+    width: 90px;
+    height: 40px;
+    border: none;
+    color: white;
+    background-color: rgb(44, 206, 44);
+}

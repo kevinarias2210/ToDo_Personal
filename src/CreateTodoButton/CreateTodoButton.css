@@ -1,8 +1,9 @@
-button{
+.buttonCreate{
     padding: 7px 20px;
     border-radius: 50%;
     position: absolute;
     bottom: 30%;
     right: 36%;
     font-size: 35px;
+    z-index: 1;
 }

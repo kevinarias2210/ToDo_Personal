@@ -10,6 +10,8 @@ function TodoProvider({ children }){
         loading, error} = useLocalStorage('todos_V1', []);
       
     const [searchValue, setBuscarValue] = React.useState('');
+
+    const [openModal, setOpenModal] = React.useState(false);
     
     const completedTodos = arrayTodos.filter(
         objetos => !!objetos.completed).length; /*Se utiliza la negación para
@@ -22,6 +24,15 @@ function TodoProvider({ children }){
         obj => 
         obj.text.toLowerCase().includes(searchValue.toLocaleLowerCase()));
         /* console.log(getSearch); */
+
+    const addTodo = (text) => {
+        const newTodos = [...arrayTodos];
+        newTodos.push({
+            text,
+            completed: false,
+        });
+        saveTodos(newTodos);
+    }
     
     const completeTodo = (text) => {
         const newTodos = [...arrayTodos];
@@ -51,8 +62,11 @@ function TodoProvider({ children }){
             getSearch,
             loading,
             error,
+            addTodo,
             completeTodo,
-            deleteTodo
+            deleteTodo,
+            openModal,
+            setOpenModal,
         }}>
             {children}
         </TodoContext.Provider>

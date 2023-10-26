@@ -1,9 +1,12 @@
-ul{
+.form__ul{
+    width: 33%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     list-style: none;
-    flex-direction: column;
-    margin: 40px 39%;
-    padding: 0;
+    margin: 40px 32%;
+    padding: 20px;
+    border-radius: 25px;
+    background-color: #589aacb9;
+    box-shadow: -2px 6px 7px 4px #0000008a;
 }

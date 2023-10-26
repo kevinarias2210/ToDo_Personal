@@ -12,23 +12,28 @@
 .form__label{
     font-size: 25px;
     font-weight: 800;
-    color: #fff500;
+    color: #B2D4DD;
     text-shadow: 1px 2px #000000c4;
 }
 
 .form__textArea{
     height: 37px;
     margin-top: 10px;
+    border: 4px solid #B7DAE2;
+    border-radius: 5px;
+    background-color: #1b3743c2;
 }
 
 .form__textArea::placeholder{
     padding-top: 10px;
     text-align: center;
+    color: #ffffff63;
 }
 
 .form__container--Botones{
-    width: 242px;
+    width: 275px;
     height: 49px;
+    margin-top: 12px;
     display: flex;
     justify-content: space-evenly;
     position: relative;
@@ -41,7 +46,7 @@
     font-size: 12px;
     border: none;
     color: white;
-    background-color: rgb(197, 45, 45);
+    background-color: #880202;
 }
 
 .TodoForm__btnAdd{
@@ -51,5 +56,5 @@
     height: 40px;
     border: none;
     color: white;
-    background-color: rgb(44, 206, 44);
+    background-color: #013201;
 }

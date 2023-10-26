@@ -4,7 +4,8 @@ li{
     align-items: center;
     margin: 10px;
     position: relative;
-    background-color: gainsboro;
+    font-weight: 800;
+    color: #29404E;
 }
 
 .like{
@@ -18,11 +19,11 @@ li{
 }
 
 .like__click{
-    color: rgb(6, 169, 55);
+    color: #013201;
 }
 
 .likeSvg:hover{
-    fill: rgb(6, 169, 55);
+    fill: #013201;
 }
 
 .p{
@@ -31,7 +32,9 @@ li{
 }
 
 .p__complete{
+    font-weight: 300;
     text-decoration: line-through;
+    color: white;
 }
 
 .delete{
@@ -40,14 +43,14 @@ li{
     display: flex;
     align-items: center;
     position: absolute;
-    top: -15px;
-    left: 365px;
+    top: 8px;
+    left: 97%;;
 }
 
 .delete__click{
-    color: rgb(219, 2, 2);
+    color: #880202;
 }
 
 .deleteSvg:hover{
-    fill: rgb(219, 2, 2);
+    fill: #880202;
 }

@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text__cargando{
+    font-size: 30px;
+    font-weight: 500;
+    color: #B2D4DD;
+}
+
+.carga{
+    width: 25px;
+    height: 25px;
+    margin: 20px;
+    border-radius: 50%;
+    background-color: #11232f;
+}

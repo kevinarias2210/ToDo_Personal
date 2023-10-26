@@ -1,9 +1,14 @@
 .buttonCreate{
+    width: 68px;
+    height: 65px;
     padding: 7px 20px;
+    border: none;
     border-radius: 50%;
     position: absolute;
     bottom: 30%;
     right: 36%;
     font-size: 35px;
     z-index: 1;
+    color: #29404E;
+    background-color: #5295A6;
 }

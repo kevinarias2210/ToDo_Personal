@@ -6,7 +6,7 @@ import './TodoItem.css';
 
 function TodoItem(props){
     return(
-      <li>
+      <li className="form__ul--li">
         <CompleteIcon completed={ props.completed } 
         onLike={props.onComplete}/>
 

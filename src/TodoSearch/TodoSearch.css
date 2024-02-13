@@ -13,3 +13,10 @@ input::placeholder{
     color: #ffffff61;
     text-align: center;
 }
+
+@media screen and (min-width: 281px) and (max-width: 500px){
+    input{
+        width: 30%;
+        margin: 0 34.8%;
+    }
+}

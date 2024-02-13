@@ -8,16 +8,16 @@ function TodoProvider({ children }){
         item: arrayTodos, 
         saveItems: saveTodos, 
         loading, error} = useLocalStorage('todos_V1', []);
-      
+    
     const [searchValue, setBuscarValue] = React.useState('');
 
     const [openModal, setOpenModal] = React.useState(false);
     
     const completedTodos = arrayTodos.filter(
         objetos => !!objetos.completed).length; /*Se utiliza la negación para
-          que la respuesta que de sea cual sea (0, string, true, false, null,
-          undefinded) de vuelva un valor booleano, va a ser lo mismo aunque 
-          no tenga la doble negación*/
+        que la respuesta que de sea cual sea (0, string, true, false, null,
+        undefinded) de vuelva un valor booleano, va a ser lo mismo aunque 
+        no tenga la doble negación*/
     const totalTodos = arrayTodos.length;
         
     const getSearch = arrayTodos.filter( 
@@ -37,7 +37,7 @@ function TodoProvider({ children }){
     const completeTodo = (text) => {
         const newTodos = [...arrayTodos];
         const todoIndex = newTodos.findIndex(
-          (obj) => obj.text === text
+            (obj) => obj.text === text
     );
         newTodos[todoIndex].completed = true;
         saveTodos(newTodos);
@@ -46,7 +46,7 @@ function TodoProvider({ children }){
     const deleteTodo = (text) => {
         const newTodos = [...arrayTodos];
         const todoIndex = newTodos.findIndex(
-          (obj) => obj.text === text
+            (obj) => obj.text === text
         );
         newTodos.splice(todoIndex, 1);
         console.log(newTodos)
